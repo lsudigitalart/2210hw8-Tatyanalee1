@@ -1,6 +1,10 @@
+var r = (60, 0, 0);
+var g = (0, 45, 0);
+var b = (0, 0, 100);
+
 function setup() {
   createCanvas(1000, 1000);
-  frameRate(15);
+  frameRate(30);
 }
 
 function draw() {
@@ -13,12 +17,12 @@ function draw() {
 function Spider(x, y) {
   translate(mouseX,mouseY);
   scale(mouseX/500.0);
-  scale(random(0.5, 2), random(0.1, 1));
+  scale(random(0.5, 3), random(1, 1));
 
   push();
 
   //the body
-  fill(random(125, 255), random(0, 200), random(16, 25));
+  fill(random(r), random(g), random(b));
   noStroke();
   ellipse(250, 250, 100, 100);
   ellipse(250, 300, 55, 50);
