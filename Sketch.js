@@ -1,23 +1,26 @@
-var r = (60, 0, 0);
-var g = (0, 45, 0);
-var b = (0, 0, 100);
-
+var r = (178, 102, 255);
+var g = (0, 200, 0);
+var b = (102, 255, 255);
 function setup() {
   createCanvas(1000, 1000);
   frameRate(30);
 }
 
 function draw() {
-  background(225, 16, 100, 10);
+  background(102, 255, 255,50);
   if (mouseIsPressed) {
     Spider(mouseX, mouseY);
   }
 }
 
 function Spider(x, y) {
-  translate(mouseX,mouseY);
-  scale(mouseX/500.0);
-  scale(random(0.5, 3), random(1, 1));
+  translate(mouseX, mouseY);
+  hSize = random(1, 2);
+  vSize = random(1, 2);
+  scale(hSize, vSize);
+  scale(mouseX/60.0);
+
+
 
   push();
 
@@ -28,7 +31,6 @@ function Spider(x, y) {
   ellipse(250, 300, 55, 50);
 
 
-  fill(0);
   stroke(1);
   strokeWeight(1);
 
