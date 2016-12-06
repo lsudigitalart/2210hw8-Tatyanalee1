@@ -2,7 +2,7 @@ var r = (178, 102, 255);
 var g = (0, 200, 0);
 var b = (102, 255, 255);
 function setup() {
-  createCanvas(1000, 1000);
+  createCanvas(2000, 1000);
   frameRate(30);
 }
 
